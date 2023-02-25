@@ -11,9 +11,9 @@ void main() {
   try {
     deposit(1200);
     deposit(-12);
-  } catch (e) {
-    print("Failed to deposit.");
-   // print(e.errorMessage());
+  } on DepositException catch (e) {
+    //print("Failed to deposit.");
+    print(e.errorMessage());
   } finally {
     print("Completed transaction.");
   }
