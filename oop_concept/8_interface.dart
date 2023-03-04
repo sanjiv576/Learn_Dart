@@ -1,10 +1,15 @@
 /*
 NOte: 'interface' keyword is not used in Dart as Java
 In Dart simply class can work as an interface.
-
+--> 'implements' keyword is used to implement an interface.
 --> each method of interface must be overridden
+--> abstract class can also be used instead of concrete class to declare an interface
+Note:
+--> All classes implicitly define an interface. 
+--> Mostly abstract class is used to declare an interface.
 */
 
+// concrete class to declare an interface
 class Remote {
   void volumeUp() {
     print("Volume up in Remote");
@@ -14,6 +19,7 @@ class Remote {
     print("Volume down in Remote");
   }
 }
+
 
 class AnotherInterface {
   void forward() {
