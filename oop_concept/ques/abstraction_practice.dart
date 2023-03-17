@@ -81,7 +81,7 @@ the salary of the corresponding employee based on their role and experience.
 */
 
 abstract class Employee {
-  double salary = 0;
+  double salary = 10;
 
   double calculateSalary();
 }
@@ -89,7 +89,7 @@ abstract class Employee {
 class Manager extends Employee {
   // double? salary;
   double? amount;
-  Manager({amount}): super();
+  Manager({this.amount}) : super();
   @override
   double calculateSalary() {
     salary += amount!;
@@ -100,7 +100,7 @@ class Manager extends Employee {
 class Developer extends Employee {
   // double? salary;
   double? amount;
-  Developer({amount}): super();
+  Developer({this.amount}) : super();
   @override
   double calculateSalary() {
     salary += amount!;
@@ -124,5 +124,6 @@ void main() {
   print(cat.makeSound());
 
   Employee developer = Developer(amount: 500);
+  developer.calculateSalary();
   print(developer.salary);
 }
